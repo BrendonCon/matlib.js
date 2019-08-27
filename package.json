@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build src/index.js --no-source-maps --out-file matlib.min.js",
-    "dev:build": "parcel build src/index.js --out-file matlib.min.js --no-minify"
+    "dev:build": "parcel build src/index.js --out-file matlib.min.js --no-minify",
+    "start": "lite-server"
   },
   "keywords": [
     "math",
@@ -22,6 +23,7 @@
   "author": "Brendon Conradie",
   "license": "ISC",
   "devDependencies": {
+    "lite-server": "^2.5.4",
     "parcel-bundler": "^1.12.3"
   }
 }
