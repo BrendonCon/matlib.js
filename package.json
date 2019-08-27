@@ -1,0 +1,25 @@
+{
+  "name": "matlib.js",
+  "version": "1.0.0",
+  "description": "A maths library for JavaScript",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "math",
+    "maths",
+    "mathematics",
+    "vectors",
+    "matrices",
+    "polar coordinates",
+    "polar",
+    "linear algebra",
+    "interpolation"
+  ],
+  "author": "Brendon Conradie",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
