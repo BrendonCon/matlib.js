@@ -4,7 +4,9 @@
   "description": "A maths library for JavaScript",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.js --no-source-maps --out-file matlib.min.js",
+    "dev:build": "parcel build src/index.js --out-file matlib.min.js --no-minify"
   },
   "keywords": [
     "math",
