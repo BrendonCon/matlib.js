@@ -4,7 +4,7 @@
   "description": "A maths library for JavaScript",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jasmine ./spec/**/*.spec.js",
     "build": "parcel build src/index.js --no-source-maps --out-file matlib.min.js",
     "dev:build": "parcel build src/index.js --out-file matlib.min.js --no-minify",
     "start": "lite-server"
@@ -23,6 +23,7 @@
   "author": "Brendon Conradie",
   "license": "ISC",
   "devDependencies": {
+    "jasmine-es6": "^0.4.3",
     "lite-server": "^2.5.4",
     "parcel-bundler": "^1.12.3"
   }
