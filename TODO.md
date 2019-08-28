@@ -1,9 +1,9 @@
 # TODO
 
 ### **27/08/2019**
-- Complete map util function
 - Add specs
-- Add vector(s) code
+- Add Vector 3
+- Add Vector 4
 - Add more geometry types
 - Add Mat3x3 type
 - Sort out dist file
