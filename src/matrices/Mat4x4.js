@@ -25,6 +25,7 @@ export default class Mat4x4 {
     this.mat[13] += A[13];
     this.mat[14] += A[14];
     this.mat[15] += A[15];
+    return this;
   }
   
   sub(A) {
@@ -44,6 +45,7 @@ export default class Mat4x4 {
     this.mat[13] -= A[13];
     this.mat[14] -= A[14];
     this.mat[15] -= A[15];    
+    return this;
   }
 
   mult(scalar) {
@@ -63,6 +65,7 @@ export default class Mat4x4 {
     this.mat[13] *= scalar;
     this.mat[14] *= scalar;
     this.mat[15] *= scalar;
+    return this;
   }
 
   div(divisor) {
@@ -82,6 +85,7 @@ export default class Mat4x4 {
     this.mat[13] /= divisor;
     this.mat[14] /= divisor;
     this.mat[15] /= divisor;
+    return this;
   }
 
   toString() {

@@ -11,6 +11,7 @@ export default class Mat2x2 {
     this.mat[1] = psi1;
     this.mat[2] = chi2;
     this.mat[3] = psi2;
+    return this;
   }
 
   add(A) {
@@ -18,6 +19,7 @@ export default class Mat2x2 {
     this.mat[1] += A[1];
     this.mat[2] += A[2];
     this.mat[3] += A[3];
+    return this;
   }
   
   sub(A) {
@@ -25,6 +27,7 @@ export default class Mat2x2 {
     this.mat[1] -= A[1];
     this.mat[2] -= A[2];
     this.mat[3] -= A[3];
+    return this;
   }
 
   mult(scalar) {
@@ -32,6 +35,7 @@ export default class Mat2x2 {
     this.mat[1] *= scalar;
     this.mat[2] *= scalar;
     this.mat[3] *= scalar;
+    return this;
   }
 
   div(divisor) {
@@ -39,6 +43,7 @@ export default class Mat2x2 {
     this.mat[1] /= divisor;
     this.mat[2] /= divisor;
     this.mat[3] /= divisor;
+    return this;
   }
 
   rotate(theta) {
@@ -46,6 +51,7 @@ export default class Mat2x2 {
     this.mat[1] *= Math.sin(theta);
     this.mat[2] *= -Math.sin(theta);
     this.mat[3] *= Math.cos(theta);
+    return this;
   }
 
   inverse() {
@@ -63,6 +69,8 @@ export default class Mat2x2 {
     } else {
       this.zero();
     }
+
+    return this;
   }
 
   multiplyMatrix(A) {
@@ -75,6 +83,8 @@ export default class Mat2x2 {
     this.mat[1] = psi1;
     this.mat[2] = chi2;
     this.mat[3] = psi2;
+    
+    return this;
   }
 
   transpose() {
@@ -83,15 +93,19 @@ export default class Mat2x2 {
 
     this.mat[1] = c;
     this.mat[2] = b;
+
+    return this;
   }
 
   identity() {
     this.mat[0] = this.mat[3] = 1;
     this.mat[1] = this.mat[2] = 0;
+    return this;
   }
 
   zero() {
     this.mat[0] = this.mat[1] = this.mat[2] = this.mat[3] = 0;
+    return this;
   }
 
   det() {

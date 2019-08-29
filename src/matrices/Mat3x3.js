@@ -17,6 +17,7 @@ export default class Mat3x3 {
     this.mat[6] = chi3;
     this.mat[7] = psi3;
     this.mat[8] = zeta3;
+    return this;
   }
 
   add(A) {
@@ -29,6 +30,7 @@ export default class Mat3x3 {
     this.mat[6] += A[6];
     this.mat[7] += A[7];
     this.mat[8] += A[8];
+    return this;
   }
   
   sub(A) {
@@ -41,6 +43,7 @@ export default class Mat3x3 {
     this.mat[6] -= A[6];
     this.mat[7] -= A[7];
     this.mat[8] -= A[8];
+    return this;
   }
 
   mult(scalar) {
@@ -53,6 +56,7 @@ export default class Mat3x3 {
     this.mat[6] *= scalar;
     this.mat[7] *= scalar;
     this.mat[8] *= scalar;
+    return this;
   }
 
   div(divisor) {
@@ -65,6 +69,7 @@ export default class Mat3x3 {
     this.mat[6] /= divisor;
     this.mat[7] /= divisor;
     this.mat[8] /= divisor;
+    return this;
   }
 
   toString() {
