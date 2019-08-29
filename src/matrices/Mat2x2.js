@@ -27,11 +27,18 @@ export default class Mat2x2 {
     this.mat[3] -= A[3];
   }
 
-  scale(scalar) {
+  mult(scalar) {
     this.mat[0] *= scalar;
     this.mat[1] *= scalar;
     this.mat[2] *= scalar;
     this.mat[3] *= scalar;
+  }
+
+  div(divisor) {
+    this.mat[0] /= divisor;
+    this.mat[1] /= divisor;
+    this.mat[2] /= divisor;
+    this.mat[3] /= divisor;
   }
 
   rotate(theta) {
