@@ -97,15 +97,29 @@ describe('Polar2D', () => {
     });
   });
 
-  xdescribe('fromVector', () => {
-    it('should convert the vector to polar coordinates', () => {
+  describe('fromVector', () => {
+    beforeEach(() => {
+      sut.fromVector({
+        x: 3,
+        y: 4
+      });
+    });
 
+    it('should convert the vector to polar coordinates', () => {
+      expect(sut.radius).toBe(5);
+      expect(sut.theta).toBeCloseTo(53.13 * Math.PI / 180);
     });
   });
 
-  xdescribe('toVector', () => {
-    it('should convert the polar coordinates to a vector', () => {
+  describe('toVector', () => {
+    beforeEach(() => {
+      sut.set(5, 53.13 * Math.PI / 180);
+    });
 
+    it('should convert the polar coordinates to a vector', () => {
+      const v = sut.toVector();
+      expect(v.x).toBeCloseTo(3);
+      expect(v.y).toBeCloseTo(4);
     });
   });
 }); 

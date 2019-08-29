@@ -4,7 +4,7 @@
 - Implement project in vectors
 - Implement reflect in vectors
 - Additional methods to geometry classes
-- Need to finish Polar2D spec
+- Need to finish Polar2D spec DONE
 - Finish Vec3 class
 
 ### **27/08/2019**
