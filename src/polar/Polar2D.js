@@ -46,7 +46,7 @@ export default class Polar2D {
     this.theta = 0;
   }
 
-  isEqual(p) {
+  equals(p) {
     return p.radius === this.radius && p.theta === this.theta;
   }
 
@@ -56,5 +56,9 @@ export default class Polar2D {
 
   toArray() {
     return [this.radius, this.theta];
+  }
+
+  toString() {
+    return `Polar2D: { radius: ${this.radius}, theta: ${this.theta} }`;
   }
 }
