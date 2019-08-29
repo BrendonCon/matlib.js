@@ -125,7 +125,7 @@ export default class Vec2 {
   }
 
   toString() {
-    return `Vector2 { x: ${this.x}, y: ${this.y} }`;
+    return `Vec2: { x: ${this.x}, y: ${this.y} }`;
   }
 
   toArray() {

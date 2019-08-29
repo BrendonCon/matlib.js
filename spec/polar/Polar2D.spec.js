@@ -8,37 +8,52 @@ describe('Polar2D', () => {
   });
 
   describe('set', () => {
-    it('should set the radius and angle', () => {
+    beforeEach(() => {
       sut.set(100, Math.PI);
+    });
+
+    it('should set the radius and angle', () => {
       expect(sut.radius).toBe(100);
       expect(sut.theta).toBe(Math.PI);;
     });
   });
 
   describe('setAngle', () => {
-    it('should set the angle', () => {
+    beforeEach(() => {
       sut.setAngle(6.28);
+    });
+
+    it('should set the angle', () => {
       expect(sut.theta).toBe(6.28);
     });
   });
 
   describe('setRadius', () => {
-    it('should set the radius', () => {
+    beforeEach(() => {
       sut.setRadius(250);
+    });
+
+    it('should set the radius', () => {    
       expect(sut.radius).toBe(250);
     });
   });
 
   describe('normalize', () => {
-    it('should set the radius to 1', () => {
+    beforeEach(() => {
       sut.normalize();
+    });
+
+    it('should set the radius to 1', () => {     
       expect(sut.radius).toBe(1);
     });
   });
 
   describe('zero', () => {
-    it('should set the radius and angle to 0', () => {
+    beforeEach(() => {
       sut.zero();
+    });
+
+    it('should set the radius and angle to 0', () => {
       expect(sut.radius).toBe(0);
       expect(sut.theta).toBe(0);
     });
@@ -82,13 +97,13 @@ describe('Polar2D', () => {
     });
   });
 
-  describe('fromVector', () => {
+  xdescribe('fromVector', () => {
     it('should convert the vector to polar coordinates', () => {
 
     });
   });
 
-  describe('toVector', () => {
+  xdescribe('toVector', () => {
     it('should convert the polar coordinates to a vector', () => {
 
     });
