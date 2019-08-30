@@ -44,8 +44,11 @@ export default class Vec3 {
     return this.x * v.x + this.y * v.y + this.z * v.z;
   }
 
-  cross() {
-    // TO BE IMPLEMENTED
+  cross(v) {
+    this.x = this.y * v.z - this.z * v.y;
+    this.y = this.z * v.x - this.x * v.z;
+    this.z = this.x * v.y - this.y * v.x;
+    return this;
   }
 
   mag() {
@@ -61,9 +64,7 @@ export default class Vec3 {
     const mag = this.mag();
 
     if (mag > 0) {
-      this.x /= mag;
-      this.y /= mag;
-      this.z /= mag;
+      this.div(mag);
     }
 
     return this;
@@ -118,7 +119,8 @@ export default class Vec3 {
   limit(max) {
     const mag = this.mag();
 
-    if (mag > max) { 
+    if (mag > max) {
+      this.normalize();
       this.mult(max);
     }
 
@@ -183,5 +185,13 @@ export default class Vec3 {
 
   static dist(u, v) {
     return Math.hypot(u.x - v.x, u.y - v.y, u.z - v.z);
+  }
+
+  static cross(u, v) {
+    return new Vector3(
+      u.y * v.z - u.z * v.y,
+      u.z * v.x - u.x * v.z,
+      u.x * v.y - u.y * v.x
+    );
   }
 }

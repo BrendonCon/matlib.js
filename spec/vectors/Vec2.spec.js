@@ -62,14 +62,91 @@ describe('Vec2', () => {
     });
   });
 
+  describe('dot', () => {
+    it('should return the dot product as a scalar value', () => {
+      const actual = sut.dot({ x: 2, y: 3});
+      expect(actual).toBe(350);
+    });
+  });
+
+  describe('cross', () => {
+    it('should the psuedo cross product which is a scalar value in 2D', () => {
+      const actual = sut.cross({ x: 2, y: 1 });
+      expect(actual).toBe(0);
+    });
+  });
+
+  describe('mag', () => {
+    beforeEach(() => {
+      sut.set(3, 4);
+    });
+
+    it('should return the magnitude of the vector', () => {
+      const actual = sut.mag();
+      expect(actual).toBe(5);
+    });
+  });
+
+  describe('magSq', () => {
+    beforeEach(() => {
+      sut.set(3, 4);
+    });
+
+    it('should return the magnitude of the vector squared', () => {
+      const actual = sut.magSq();
+      expect(actual).toBe(25);
+    });
+  });
+
+  describe('normalize', () => {
+    beforeEach(() => {
+      sut.normalize();
+    });
+
+    it('should normalize the components of the vector', () => {
+      expect(sut.x).toBeLessThanOrEqual(1);
+      expect(sut.y).toBeLessThanOrEqual(1);
+    });
+  });
+
+  describe('dist', () => {
+    it('should return the distance between two vectors', () => {
+      const actual = sut.dist({ x: 96, y: 47 });
+      expect(actual).toBe(5);
+    });
+  });
+
+  describe('lerp', () => {
+    beforeEach(() => {
+      sut.lerp({ x: 50, y: 0 }, 0.5);
+    });
+
+    it('should linearly interpolate between two vectors', () => {
+      expect(sut.x).toBe(75);
+      expect(sut.y).toBe(25);
+    });
+  });
+
   describe('zero', () => {
     beforeEach(() => {
       sut.zero();
     });
-
+    
     it('should each component of the vector to 0', () => {
       expect(sut.x).toBe(0);
       expect(sut.y).toBe(0);
+    });
+  });
+  
+  describe('abs', () => {
+    beforeEach(() => {
+      sut.set(-4, -10);
+      sut.abs();
+    });
+
+    it('should assign the components absolute value', () => {
+      expect(sut.x).toBe(4);
+      expect(sut.y).toBe(10);
     });
   });
 
@@ -92,6 +169,31 @@ describe('Vec2', () => {
     it('should set each component of the vector to 1', () => {
       expect(sut.x).toBe(1);
       expect(sut.y).toBe(1);
+    });
+  });
+
+  describe('random', () => {
+    beforeEach(() => {
+      sut.random();
+    });
+
+    it('should set each component of the vector to a random flaot between 0 and 1', () => {
+      expect(sut.x).toBeGreaterThanOrEqual(0);
+      expect(sut.y).toBeGreaterThanOrEqual(0);
+      expect(sut.x).toBeLessThanOrEqual(1);
+      expect(sut.y).toBeLessThanOrEqual(1);
+    });
+  });
+
+  describe('limit', () => {
+    beforeEach(() => {
+      sut.set(100, 50);
+      sut.limit(5);
+    });
+
+    it('should limit the magnitude of the vector', () => {
+      const actual = sut.mag();
+      expect(actual).toBeCloseTo(5);
     });
   });
 

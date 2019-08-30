@@ -55,8 +55,7 @@ export default class Vec2 {
     const mag = this.mag();
 
     if (mag > 0) {
-      this.x /= mag;
-      this.y /= mag;
+      this.div(mag);
     }
 
     return this;
@@ -118,6 +117,7 @@ export default class Vec2 {
     const mag = this.mag();
 
     if (mag > max) { 
+      this.normalize();
       this.mult(max);
     }
 
