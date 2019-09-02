@@ -1,5 +1,12 @@
 # Changelog
 
+## 02/09/2019
+### Added
+- 2D distance function
+- distance function spec
+- step function from GLSL
+- spec for step function
+
 ## 30/08/2019
 ### Added
 - To the changelog finally, sorry I forgot about all this.

@@ -15,6 +15,7 @@ import Polar2D from './polar/Polar2D.js';
 
 import clamp from './utils/clamp/js';
 import degrees from './utils/degrees.js';
+import distance from './utils/distance.js';
 import lerp from './utils/lerp.js';
 import frac from './utils/frac.js';
 import map from './utils/map.js';
@@ -22,6 +23,7 @@ import normalize from './utils/normalize.js';
 import radians from './utils/radians.js';
 import random from './utils/random.js';
 import randomInt from './utils/randomInt.js';
+import step from './utils/step.js';
 
 import Vec2 from './vectors/Vec2.js';
 import Vec3 from './vectors/Vec3.js';
@@ -45,6 +47,7 @@ export default {
 
   clamp,
   degrees,
+  distance,
   lerp,
   frac,
   map,
@@ -52,6 +55,7 @@ export default {
   radians,
   random,
   randomInt,
+  step,
 
   Vec2,
   Vec3,
