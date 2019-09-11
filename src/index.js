@@ -13,7 +13,7 @@ import Mat2x2 from './matrices/Mat2x2.js';
 
 import Polar2D from './polar/Polar2D.js';
 
-import clamp from './utils/clamp/js';
+import clamp from './utils/clamp.js';
 import degrees from './utils/degrees.js';
 import distance from './utils/distance.js';
 import lerp from './utils/lerp.js';

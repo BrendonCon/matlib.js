@@ -5,4 +5,8 @@ export default class Ellipse {
     this.radiusX = opts.radiusX;
     this.radiusY = opts.radiusY;
   }
+
+  area() {
+    return Math.PI * this.radiusX * this.radiusY;
+  }
 }

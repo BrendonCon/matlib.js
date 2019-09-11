@@ -5,4 +5,12 @@ export default class Rectangle {
     this.width = opts.width;
     this.height = opts.height;
   }
+
+  area() {
+    return this.width * this.height;
+  }
+
+  perimeter() {
+    return 2 * (this.width + this.height);
+  }
 }

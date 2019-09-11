@@ -1,5 +1,5 @@
 export default class Polygon {
-  constructor(points = []) {
-    this.points = points;
+  constructor(vertices = []) {
+    this.vertices = vertices;
   }
 }

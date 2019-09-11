@@ -1,5 +1,18 @@
 # Changelog
 
+## 12/09/2019
+### Added
+- Area, perimeter methods to varying geometry classes
+
+### Update 
+- Renamed points to vertices for `Polygon` type
+
+### Fixed
+- Build wasnt building due to typo in `index.js`
+
+### Notes
+- Will need to abstract some base types here
+
 ## 02/09/2019
 ### Added
 - 2D distance function
