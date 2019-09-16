@@ -1,5 +1,18 @@
 # Changelog
 
+## 16/09/2019
+### Added
+- 3d primitive geometry data components
+
+### Updated
+- split geometry folder into 2d and 3d
+- moved 2d primitives
+- `Line` is now `LineSegment`
+- Moved to parameters over objects, **#perfreasons**
+
+### Removed
+- positional properties from geometries
+
 ## 12/09/2019
 ### Added
 - Area, perimeter methods to varying geometry classes
