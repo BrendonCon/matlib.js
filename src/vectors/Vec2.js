@@ -62,7 +62,10 @@ export default class Vec2 {
   }
 
   dist(v) {
-    return Math.hypot(v.x - this.x, v.y - this.y);
+    return Math.hypot(
+      v.x - this.x, 
+      v.y - this.y
+    );
   }
 
   lerp(v, normal) {
@@ -141,27 +144,39 @@ export default class Vec2 {
   }
 
   static add(u, v) {
-    return new Vec2(u.x + v.x, u.y + v.y);
+    return new Vec2(
+      u.x + v.x, 
+      u.y + v.y
+    );
   }
 
   static sub(u, v) {
-    return new Vec2(u.x - v.x, u.y - v.y);
+    return new Vec2(
+      u.x - v.x, 
+      u.y - v.y
+    );
   }
 
   static mult(u, scalar) {
-    return new Vec2(u.x * scalar, u.y * scalar);
+    return new Vec2(
+      u.x * scalar, 
+      u.y * scalar
+    );
   }
 
   static div(u, divisor) {
-    return new Vec2(u.x / divisor, u.y / divisor);
+    return new Vec2(
+      u.x / divisor, 
+      u.y / divisor
+    );
   }
 
   static left() {
-    return new Vec2(1, 0);
+    return new Vec2(-1, 0);
   }
 
   static right() {
-    return new Vec2(-1, 0);
+    return new Vec2(1, 0);
   }
 
   static up() {
@@ -181,6 +196,45 @@ export default class Vec2 {
   }
 
   static dist(u, v) {
-    return Math.hypot(u.x - v.x, u.y - v.y);
+    return Math.hypot(
+      u.x - v.x, 
+      u.y - v.y
+    );
+  }
+
+  static cross(u, v) {
+    return u.x * v.y - u.y * v.x;
+  }
+
+  static dot(u, v) {
+    return u.x * v.x + u.y * v.y;
+  }
+
+  static mag(u) {
+    return Math.hypot(u.x, u.y);
+  }
+
+  static negate(u) {
+    u.x *= -1;
+    u.y *= -2;
+  }
+
+  static random() {
+    return new Vec2(
+      Math.random(), 
+      Math.random()
+    );
+  }
+
+  static abs(u) {
+    u.x = Math.abs(u.x);
+    u.y = Math.abs(u.y);
+  }
+
+  static lerp(u, v, normal) {
+    return new Vec2(
+      (v.x - u.x) * normal + u.x,
+      (v.y - u.y) * normal + u.y
+    );
   }
 }

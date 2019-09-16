@@ -1,5 +1,9 @@
 # Changelog
 
+## 17/09/2019
+### Added
+- static methods for `Vec2` class
+
 ## 16/09/2019
 ### Added
 - 3d primitive geometry data components
