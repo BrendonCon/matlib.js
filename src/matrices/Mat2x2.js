@@ -127,6 +127,13 @@ export default class Mat2x2 {
     return new Mat2x2([...this.mat]);
   }
 
+  random() {
+    this.mat[0] = Math.random();
+    this.mat[1] = Math.random();
+    this.mat[2] = Math.random();
+    this.mat[3] = Math.random();
+  }
+
   static identity() {
     return new Mat2x2([
       1, 0, 
@@ -221,5 +228,14 @@ export default class Mat2x2 {
       A[1] === B[1] && 
       A[2] === B[2] &&
       A[3] === B[3];
+  }
+
+  static random() {
+    return new Mat2x2([
+      Math.random(),
+      Math.random(),
+      Math.random(),
+      Math.random()
+    ]);
   }
 }

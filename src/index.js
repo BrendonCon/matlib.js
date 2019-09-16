@@ -21,6 +21,7 @@ import Polar2D from './polar/Polar2D.js';
 import clamp from './utils/clamp.js';
 import degrees from './utils/degrees.js';
 import distance from './utils/distance.js';
+import dot from './utils/dot.js';
 import lerp from './utils/lerp.js';
 import frac from './utils/frac.js';
 import map from './utils/map.js';
@@ -58,6 +59,7 @@ export default {
   clamp,
   degrees,
   distance,
+  dot,
   lerp,
   frac,
   map,

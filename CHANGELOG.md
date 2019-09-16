@@ -5,6 +5,7 @@
 - static methods for `Vec2` class
 - general dot product util/function
 - spec for general dot product function
+- random and static random to `Mat2x2`
 
 ## 16/09/2019
 ### Added
