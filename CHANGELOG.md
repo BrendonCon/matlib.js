@@ -3,6 +3,8 @@
 ## 17/09/2019
 ### Added
 - static methods for `Vec2` class
+- general dot product util/function
+- spec for general dot product function
 
 ## 16/09/2019
 ### Added
