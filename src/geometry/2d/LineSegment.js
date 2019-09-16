@@ -1,4 +1,4 @@
-export default class Line {
+export default class LineSegment {
   constructor(x1, y1, x2, y2) {
     this.x1 = x1;
     this.y1 = y1;

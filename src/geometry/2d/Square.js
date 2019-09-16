@@ -1,8 +1,6 @@
 export default class Square {
-  constructor(opts) {
-    this.x = opts.x;
-    this.y = opts.y;
-    this.length = opts.length;
+  constructor(length) {
+    this.length = length;
   }
 
   area() {

@@ -1,13 +1,18 @@
 import TAU from './constants/tau.js';
 import PHI from './constants/phi.js';
 
-import Circle from './geometry/Circle.js';
-import Ellipse from './geometry/Ellipse.js';
-import Line from './geometry/Line.js';
-import Point from './geometry/Point.js';
-import Polygon from './geometry/Polygon.js';
-import Rectangle from './geometry/Rectangle.js';
-import Square from './geometry/Square.js';
+import Circle from './geometry/2d/Circle.js';
+import Ellipse from './geometry/2d/Ellipse.js';
+import LineSegment from './geometry/2d/LineSegment.js';
+import Point from './geometry/2d/Point.js';
+import Polygon from './geometry/2d/Polygon.js';
+import Rectangle from './geometry/2d/Rectangle.js';
+import Square from './geometry/2d/Square.js';
+
+import Cone from './geometry/3d/Cone.js';
+import Cube from './geometry/3d/Cube.js';
+import Cylinder from './geometry/3d/Cylinder.js';
+import Sphere from './geometry/3d/Sphere.js';
 
 import Mat2x2 from './matrices/Mat2x2.js';
 
@@ -35,11 +40,16 @@ export default {
 
   Circle,
   Ellipse,
-  Line,
+  LineSegment,
   Point,
   Polygon,
   Rectangle,
   Square,
+
+  Cone,
+  Cube,
+  Cylinder,
+  Sphere,
 
   Mat2x2,
 

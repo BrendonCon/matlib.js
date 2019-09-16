@@ -1,9 +1,7 @@
 export default class Rectangle {
-  constructor(opts = {}) {
-    this.x = opts.x;
-    this.y = opts.y;
-    this.width = opts.width;
-    this.height = opts.height;
+  constructor(width = 0, height = width) {
+    this.width = width;
+    this.height = height;
   }
 
   area() {
