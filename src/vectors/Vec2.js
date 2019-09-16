@@ -216,7 +216,7 @@ export default class Vec2 {
 
   static negate(u) {
     u.x *= -1;
-    u.y *= -2;
+    u.y *= -1;
   }
 
   static random() {

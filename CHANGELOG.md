@@ -6,6 +6,8 @@
 - general dot product util/function
 - spec for general dot product function
 - random and static random to `Mat2x2`
+- added smoothstep function
+- additional static methods for `Vec3` class
 
 ## 16/09/2019
 ### Added

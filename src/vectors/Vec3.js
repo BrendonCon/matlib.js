@@ -71,7 +71,11 @@ export default class Vec3 {
   }
 
   dist(v) {
-    return Math.hypot(v.x - this.x, v.y - this.y, v.z - this.z);
+    return Math.hypot(
+      v.x - this.x, 
+      v.y - this.y, 
+      v.z - this.z
+    );
   }
 
   lerp(v, normal) {
@@ -144,27 +148,43 @@ export default class Vec3 {
   }
 
   static add(u, v) {
-    return new Vec3(u.x + v.x, u.y + v.y, u.z + v.z);
+    return new Vec3(
+      u.x + v.x, 
+      u.y + v.y, 
+      u.z + v.z
+    );
   }
 
   static sub(u, v) {
-    return new Vec3(u.x - v.x, u.y - v.y, u.z - v.z);
+    return new Vec3(
+      u.x - v.x, 
+      u.y - v.y, 
+      u.z - v.z
+    );
   }
 
   static mult(u, scalar) {
-    return new Vec3(u.x * scalar, u.y * scalar, u.z * scalar);
+    return new Vec3(
+      u.x * scalar, 
+      u.y * scalar, 
+      u.z * scalar
+    );
   }
 
   static div(u, divisor) {
-    return new Vec3(u.x / divisor, u.y / divisor, u.z / divisor);
+    return new Vec3(
+      u.x / divisor, 
+      u.y / divisor, 
+      u.z / divisor
+    );
   }
 
   static left() {
-    return new Vec3(1, 0, 0);
+    return new Vec3(-1, 0, 0);
   }
 
   static right() {
-    return new Vec3(-1, 0, 0);
+    return new Vec3(1, 0, 0);
   }
 
   static up() {
@@ -184,7 +204,11 @@ export default class Vec3 {
   }
 
   static dist(u, v) {
-    return Math.hypot(u.x - v.x, u.y - v.y, u.z - v.z);
+    return Math.hypot(
+      u.x - v.x, 
+      u.y - v.y, 
+      u.z - v.z
+    );
   }
 
   static cross(u, v) {
@@ -192,6 +216,42 @@ export default class Vec3 {
       u.y * v.z - u.z * v.y,
       u.z * v.x - u.x * v.z,
       u.x * v.y - u.y * v.x
+    );
+  }
+
+  static dot(u, v) {
+    return u.x * v.x + u.y * v.y + u.z * v.z;
+  }
+
+  static mag(u) {
+    return Math.hypot(u.x, u.y, u.z);
+  }
+
+  static negate(u) {
+    u.x *= -1;
+    u.y *= -1;
+    u.z *= -1;
+  }
+
+  static random() {
+    return new Vector3(
+      Math.random(),
+      Math.random(),
+      Math.random()
+    );
+  }
+
+  static abs(u) {
+    u.x = Math.abs(u.x);
+    u.y = Math.abs(u.y);
+    u.z = Math.abs(u.z);
+  }
+
+  static lerp(u, v, normal) {
+    return new Vec3(
+      (v.x - u.x) * normal + u.x,
+      (v.y - u.y) * normal + u.y,
+      (v.z - u.z) * normal + u.z
     );
   }
 }
