@@ -228,9 +228,11 @@ export default class Vec3 {
   }
 
   static negate(u) {
-    u.x *= -1;
-    u.y *= -1;
-    u.z *= -1;
+    return new Vec3(
+      u.x * -1,
+      u.y * -1,
+      u.z * -1
+    );
   }
 
   static random() {
@@ -242,9 +244,11 @@ export default class Vec3 {
   }
 
   static abs(u) {
-    u.x = Math.abs(u.x);
-    u.y = Math.abs(u.y);
-    u.z = Math.abs(u.z);
+    return new Vec3(
+      Math.abs(u.x),
+      Math.abs(u.y),
+      Math.abs(u.z)
+    );
   }
 
   static lerp(u, v, normal) {

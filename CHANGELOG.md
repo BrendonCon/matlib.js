@@ -6,9 +6,11 @@
 
 ### Update
 - Formatting for `distance` util
+- Made use of `map` and `reduce` to clean up general `dot` function
 
 ### Fixes
-- return a new `Vec2` for some of the static methods
+- return new `Vec2` for some of the static methods
+- return new `Vec3` for some of the static methods
 
 ## 17/09/2019
 ### Added
