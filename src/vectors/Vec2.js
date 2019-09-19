@@ -215,8 +215,10 @@ export default class Vec2 {
   }
 
   static negate(u) {
-    u.x *= -1;
-    u.y *= -1;
+    return new Vec2(
+      u.x * -1,
+      u.y * -1
+    );
   }
 
   static random() {
@@ -227,8 +229,10 @@ export default class Vec2 {
   }
 
   static abs(u) {
-    u.x = Math.abs(u.x);
-    u.y = Math.abs(u.y);
+    return new Vec2(
+      Math.abs(u.x),
+      Math.abs(u.y)
+    );
   }
 
   static lerp(u, v, normal) {

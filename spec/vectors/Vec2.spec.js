@@ -234,4 +234,167 @@ describe('Vec2', () => {
       expect(actual).toBe(false);
     });
   });
+
+  describe('static add', () => {
+    const v = { x: 100, y: 50 };
+    const u = { x: 10, y: 1 };
+
+    it('should add two vectors correctly', () => {
+      const actual = Vec2.add(v, u);
+      expect(actual.x).toBe(110);
+      expect(actual.y).toBe(51);
+    });
+  });
+
+  describe('static sub', () => {
+    const v = { x: 100, y: 50 };
+    const u = { x: 10, y: 1 };
+
+    it('should subtract two vectors correctly', () => {
+      const actual = Vec2.sub(v, u);
+      expect(actual.x).toBe(90);
+      expect(actual.y).toBe(49);
+    });
+  });
+
+  describe('static mult', () => {
+    const v = { x: 100, y: 50 };
+    const alpha = 2;
+
+    it('should multiply a vector and scalar correctly', () => {
+      const actual = Vec2.mult(v, alpha);
+      expect(actual.x).toBe(200);
+      expect(actual.y).toBe(100);
+    });
+  });
+
+  describe('static div', () => {
+    const v = { x: 100, y: 50 };
+    const alpha = 2;
+
+    it('should divide a vectors by a scalar correctly', () => {
+      const actual = Vec2.div(v, alpha);
+      expect(actual.x).toBe(50);
+      expect(actual.y).toBe(25);
+    });
+  });
+
+  describe('static left', () => {
+    it('should return a left facing vector', () => {
+      const actual = Vec2.left();
+      expect(actual.x).toBe(-1);
+      expect(actual.y).toBe(0);
+    });
+  });
+
+  describe('static right', () => {
+    it('should return a right facing vector', () => {
+      const actual = Vec2.right();
+      expect(actual.x).toBe(1);
+      expect(actual.y).toBe(0);
+    });
+  });
+
+  describe('static up', () => {
+    it('should return an upward facing vector', () => {
+      const actual = Vec2.up();
+      expect(actual.x).toBe(0);
+      expect(actual.y).toBe(-1);
+    });
+  });
+
+  describe('static down', () => {
+    it('should return a downward facing vector', () => {
+      const actual = Vec2.down();
+      expect(actual.x).toBe(0);
+      expect(actual.y).toBe(1);
+    });
+  });
+
+  describe('static zero', () => {
+    it('should return zero vector', () => {
+      const actual = Vec2.zero();
+      expect(actual.x).toBe(0);
+      expect(actual.y).toBe(0);
+    });
+  });
+
+  describe('static one', () => {
+    it('should return a vector with each component equal to 1', () => {
+      const actual = Vec2.one();
+      expect(actual.x).toBe(1);
+      expect(actual.y).toBe(1);
+    });
+  });
+
+  describe('static dist', () => {
+    const v = { x: 66, y: 57 };
+    const u = { x: 70, y: 60 };
+
+    it('should return the distance between two vectors', () => {
+      const actual = Vec2.dist(v, u);
+      expect(actual).toBe(5);
+    });
+  });
+
+  describe('static cross', () => {
+    const v = { x: 1, y: 2 };
+    const u = { x: 3, y: 4 };
+
+    it('should return the cross product of two vectors', () => {
+      const actual = Vec2.cross(v, u);
+      expect(actual).toBe(-2);
+    });
+  });
+
+  describe('static dot', () => {
+    const v = { x: 1, y: 2 };
+    const u = { x: 3, y: 4 };
+
+    it('should return the dot product of two vectors', () => {
+      const actual = Vec2.dot(v, u);
+      expect(actual).toBe(11);
+    });
+  });
+
+  describe('static mag', () => {
+    const v = { x: 3, y: 4 };
+
+    it('should return a vectors magnitude', () => {
+      const actual = Vec2.mag(v);
+      expect(actual).toBe(5);
+    });
+  });
+
+  describe('static negate', () => {
+    const v = { x: 3, y: 4 };
+
+    it('should return the negated version of a vector', () => {
+      const actual = Vec2.negate(v);
+      expect(actual.x).toBe(-3);
+      expect(actual.y).toBe(-4);
+    });
+  });
+
+  describe('static random', () => {
+    it('should return a random vector', () => {
+      const actual = Vec2.random();
+      expect(actual.x).toBeGreaterThanOrEqual(0);
+      expect(actual.x).toBeLessThanOrEqual(1);
+      expect(actual.y).toBeGreaterThanOrEqual(0);
+      expect(actual.x).toBeLessThanOrEqual(1);
+    });
+  });
+
+  describe('static lerp', () => {
+    const v = { x: 100, y: 100 };
+    const u = { x: 200, y: 200};
+    const normal = 0.5;
+    
+    it('should return vector intepolated linearly between two vectors', () => {
+      const actual = Vec2.lerp(v, u, normal);
+      expect(actual.x).toBe(150);
+      expect(actual.y).toBe(150);
+    });
+  });
 }); 

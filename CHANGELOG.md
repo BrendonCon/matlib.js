@@ -1,5 +1,15 @@
 # Changelog
 
+## 20/09/2019
+### Added
+- specs for `Vec2` class static methods
+
+### Update
+- Formatting for `distance` util
+
+### Fixes
+- return a new `Vec2` for some of the static methods
+
 ## 17/09/2019
 ### Added
 - static methods for `Vec2` class
