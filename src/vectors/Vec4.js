@@ -68,19 +68,39 @@ export default class Vec4 {
   }
 
   static add(u, v) {
-    return new Vec4(u.x + v.x, u.y + v.y, u.z + v.z, u.w + v.z);
+    return new Vec4(
+      u.x + v.x, 
+      u.y + v.y, 
+      u.z + v.z, 
+      u.w + v.z
+    );
   }
 
   static sub(u, v) {
-    return new Vec4(u.x - v.x, u.y - v.y, u.z - v.z, u.w - v.w);
+    return new Vec4(
+      u.x - v.x,
+      u.y - v.y,
+      u.z - v.z, 
+      u.w - v.w
+    );
   }
 
   static mult(u, scalar) {
-    return new Vec4(u.x * scalar, u.y * scalar, u.z * scalar, u.w * scalar);
+    return new Vec4(
+      u.x * scalar, 
+      u.y * scalar, 
+      u.z * scalar, 
+      u.w * scalar
+    );
   }
 
   static div(u, divisor) {
-    return new Vec4(u.x / divisor, u.y / divisor, u.z / divisor, u.w / divisor);
+    return new Vec4(
+      u.x / divisor, 
+      u.y / divisor, 
+      u.z / divisor, 
+      u.w / divisor
+    );
   }
 
   static zero() {
@@ -92,6 +112,11 @@ export default class Vec4 {
   }
 
   static dist(u, v) {
-    return Math.hypot(u.x - v.x, u.y - v.y, u.z - v.z, u.w - v.w);
+    return Math.hypot(
+      u.x - v.x, 
+      u.y - v.y, 
+      u.z - v.z, 
+      u.w - v.w
+    );
   }
 }

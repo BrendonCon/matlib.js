@@ -1,5 +1,14 @@
 # Changelog
 
+## 22/09/2019
+### Added
+- static methods `rotate`, `angle` and `normalize` to `Vec2`
+- `rotateX`, `rotateY`, `rotateZ` methods on `Vec3`
+
+### Update
+- formatting on `Vec4`
+- defaults for `randomInt`
+
 ## 20/09/2019
 ### Added
 - specs for `Vec2` class static methods

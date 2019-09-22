@@ -147,6 +147,21 @@ export default class Vec3 {
     return this.x === v.x && this.y === v.y && this.z === v.z;
   }
 
+  rotateX(theta) {
+    this.y = this.y * Math.cos(theta) - this.z * Math.sin(theta);
+    this.z = this.y * Math.sin(theta) + this.z * Math.cos(theta);
+  }
+
+  rotateY(theta) {
+    this.x = this.x * Math.cos(theta) + this.z * Math.sin(theta);
+    this.z = this.x * -Math.sin(theta) + this.z * Math.cos(theta);
+  }
+
+  rotateZ(theta) {
+    this.x = this.x * Math.cos(theta) - this.y * Math.sin(theta);
+    this.y = this.x * Math.sin(theta) + this.y * Math.cos(theta);
+  }
+
   static add(u, v) {
     return new Vec3(
       u.x + v.x, 

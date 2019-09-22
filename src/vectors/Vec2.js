@@ -112,7 +112,7 @@ export default class Vec2 {
     return this;
   }
 
-  getAngle() {
+  angle() {
     return Math.atan2(this.y, this.x);
   }
 
@@ -239,6 +239,29 @@ export default class Vec2 {
     return new Vec2(
       (v.x - u.x) * normal + u.x,
       (v.y - u.y) * normal + u.y
+    );
+  }
+
+  static angle(u) {
+    return Math.atan2(u.y, u.x);
+  }
+
+  static rotate(u, theta) {
+    const cos = Math.cos(theta);
+    const sin = Math.sin(theta);
+
+    return new Vec2(
+      u.x * cos - u.y * sin,
+      u.x * sin + u.y * cos
+    );
+  }
+
+  static normalize(u) {
+    const mag = Math.hypot(u.x, u.y);
+
+    return new Vec2(
+      u.x / mag,
+      u.y / mag
     );
   }
 }
