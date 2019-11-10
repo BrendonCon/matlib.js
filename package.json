@@ -1,0 +1,31 @@
+{
+  "name": "matlib.js",
+  "version": "1.0.0",
+  "description": "A maths library for JavaScript",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jasmine ./spec/**/*.spec.js",
+    "build": "parcel build src/index.js --no-source-maps --out-file matlib.min.js",
+    "dev:build": "parcel build src/index.js --out-file matlib.min.js --no-minify",
+    "start": "lite-server"
+  },
+  "keywords": [
+    "math",
+    "maths",
+    "mathematics",
+    "vectors",
+    "matrices",
+    "polar coordinates",
+    "polar",
+    "linear algebra",
+    "interpolation",
+    "cartesian"
+  ],
+  "author": "Brendon Conradie",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-es6": "^0.4.3",
+    "lite-server": "^2.5.4",
+    "parcel-bundler": "^1.12.3"
+  }
+}
