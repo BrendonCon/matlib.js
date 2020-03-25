@@ -29,6 +29,7 @@ import normalize from './utils/normalize.js';
 import radians from './utils/radians.js';
 import random from './utils/random.js';
 import randomInt from './utils/randomInt.js';
+import rotate from './utils/rotate.js';
 import smoothstep from './utils/smoothstep.js';
 import step from './utils/step.js';
 
@@ -68,6 +69,7 @@ export default {
   radians,
   random,
   randomInt,
+  rotate,
   smoothstep,
   step,
 

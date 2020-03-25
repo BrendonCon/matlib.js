@@ -1,5 +1,10 @@
 # Changelog
 
+## 25/03/2020
+### Added
+- `rotate` point utility function
+- spec for `rotate`
+
 ## 22/09/2019
 ### Added
 - static methods `rotate`, `angle` and `normalize` to `Vec2`
